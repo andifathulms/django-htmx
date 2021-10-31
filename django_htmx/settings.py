@@ -141,7 +141,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "home"  # change to desired url name
+LOGIN_REDIRECT_URL = "auth"  # change to desired url name
 LOGOUT_REDIRECT_URL = "home"  # change to desired url name
 ACCOUNT_SESSION_REMEMBER = True  # remember user via sessions
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False  # preferred UX

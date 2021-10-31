@@ -1,0 +1,21 @@
+<div class="card w-600 mw-full mx-auto" id="tasks">
+	<h3 class="card-title"> Your tasks </h3>
+	<ul> 
+	{% for task in tasks %}
+	<li> {{task}} </li>
+	{% empty %}
+	<li> No items on your list yet </li>
+	{% endfor %}
+	{% if errors %} {{errors}} {% endif %}
+	<form 
+    hx-post="{% url 'home' %}"
+    hx-swap= "outerHTML"
+    hx-target = "#tasks"
+    >
+        {{ form }}
+        <button type="submit"> Add </button>
+    </form>
+
+<!-- no hx-trigger on a form means it will be on submit -->
+	</ul>
+</div>
